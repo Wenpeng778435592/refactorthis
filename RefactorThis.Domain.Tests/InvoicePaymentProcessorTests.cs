@@ -84,7 +84,7 @@ namespace RefactorThis.Domain.Tests
         {
             SetupInvoice(10, 0, new List<Payment> { new Payment { Amount = 10 } });
 
-            var result = _paymentProcessor.ProcessPayment((new Payment { Amount = 300 }));
+            var result = _paymentProcessor.ProcessPayment((new Payment { Amount = 10 }));
 
             Assert.AreEqual("invoice was already fully paid", result);
         }
